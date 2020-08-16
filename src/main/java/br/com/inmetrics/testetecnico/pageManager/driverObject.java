@@ -8,18 +8,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 	
 	private static WebDriver driver;
 
-	 public static WebDriver InicializaDriver() {
+	 public static WebDriver inicializaDriver() {
         if (driver == null) {
        //System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
             driver = new ChromeDriver();
             driver.get("http://www.inmrobo.tk/accounts/login/");
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         }
         return driver;
     }
 
-    public WebDriver FechandoDriver() {
+    public static WebDriver fechandoDriver() {
         if (driver != null) {
             driver.close();
         }
